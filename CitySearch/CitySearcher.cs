@@ -59,7 +59,7 @@ namespace CitySearch
                         {
                             if (st.Length > cityLen)
                             {
-                                string subStr = st.Substring(0, cityLen); //
+                                string subStr = st.Substring(0, cityLen); 
 
                                 if (subStr.Contains(searchString))
                                 {
@@ -83,9 +83,9 @@ namespace CitySearch
                     Console.WriteLine("The List of next Characters \n" + nxtLetterString);
                     return new CitySearcher(nextLetters, nextCities);
                 }
-                else {
-                    //nxtCityString="";
-                   // nxtLetterString = "";
+                else if (cityLen ==0) 
+                {
+                    
                     Console.WriteLine("No Search String Entered");
                     return new CitySearcher(null,null);
 
@@ -97,10 +97,8 @@ namespace CitySearch
                 Console.WriteLine("There is no list of cities available");
                 return new CitySearcher(null,null);
             }
-
+            return new CitySearcher(null, null);
         }
-
-
 
 
         public static void Main()
